@@ -40,7 +40,6 @@ class CepApiController extends Controller
         return response()->json(['message' => 'Formato inválido'], 400);
     }
 
-
     /**
      * Display the specified resource.
      *
