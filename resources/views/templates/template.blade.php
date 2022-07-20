@@ -25,6 +25,9 @@
                     <li class="nav-item">
                         <a href="{{ route('ceps.create') }}" class="nav-link">Novo CEP</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('pesquisa.cep') }}" class="nav-link">Pesquisa Vue.js</a>
+                    </li>
                 </ul>
 
                 <form class="d-flex" role="search" method="GET" action="{{ route('ceps.list') }}">
@@ -36,7 +39,9 @@
     </nav>
 
     <div class="container-fluid">
-        @yield('content')
+        <div class="p-4">
+            @yield('content')
+        </div>
     </div>
 
     <script src="{{ asset('vendors/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js') }}"></script>

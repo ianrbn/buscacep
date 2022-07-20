@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CepController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PesquisaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,7 @@ Route::prefix('ceps')->group(function () {
     Route::put('/edit/{cep:slug}', [CepController::class, 'update'])->name('ceps.update');
     Route::delete('/edit/{cep:slug}', [CepController::class, 'destroy'])->name('ceps.destroy');
 });
+
+Route::get('/pesquisa', [PesquisaController::class, 'search'])->name('pesquisa.cep');
 
 Route::get('/', 'App\Http\Controllers\MainController@index');
