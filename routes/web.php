@@ -29,6 +29,4 @@ Route::prefix('ceps')->group(function () {
     Route::delete('/edit/{cep:slug}', [CepController::class, 'destroy'])->name('ceps.destroy');
 });
 
-Route::get('/pesquisa', [PesquisaController::class, 'search'])->name('pesquisa.cep');
-
 Route::get('/', 'App\Http\Controllers\MainController@index');
